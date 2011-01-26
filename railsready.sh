@@ -93,7 +93,7 @@ echo "==> done..."
 echo -e "\n=> Installing libs needed for sqlite and mysql..."
 sudo apt-get -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient16-dev libmysqlclient16 >> $log_file 2>&1
 echo -e "\n=> Installing libs needed for postgresql..."
-sudo apt-get -y install libpg-dev>> $log_file 2>&1
+sudo apt-get -y install libpq-dev>> $log_file 2>&1
 echo "==> done..."
 
 # Install imagemagick
@@ -164,7 +164,7 @@ echo "==> done..."
 
 echo -e "\n=> Installing Postgresql, Postfix..."
   sudo apt-get install postgresql-$postgresql_version >> $log_file 2>&1
-  sudo apt-get install postfix >> $log_file 2>&1
+#  sudo apt-get install postfix >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n#################################"
