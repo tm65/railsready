@@ -163,8 +163,8 @@ fi
 echo "==> done..."
 
 echo -e "\n=> Installing Postgresql, Postfix..."
-  sudo apt-get install postgresql-$postgresql_version >> $log_file 2>&1
-#  sudo apt-get install postfix >> $log_file 2>&1
+  sudo apt-get -y install postgresql-$postgresql_version >> $log_file 2>&1
+#  sudo apt-get -y install postfix >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n#################################"
