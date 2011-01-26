@@ -13,6 +13,7 @@ ruby_source_url="ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p136.tar.gz"
 ruby_source_tar_name="ruby-1.9.2-p136.tar.gz"
 ruby_source_dir_name="ruby-1.9.2-p136"
 script_runner=$(whoami)
+postgresql_version="9.0"
 log_file=$(cd && pwd)/railsready/install.log
 
 control_c()
@@ -91,6 +92,8 @@ echo "==> done..."
 
 echo -e "\n=> Installing libs needed for sqlite and mysql..."
 sudo apt-get -y install libsqlite3-0 sqlite3 libsqlite3-dev libmysqlclient16-dev libmysqlclient16 >> $log_file 2>&1
+echo -e "\n=> Installing libs needed for postgresql..."
+sudo apt-get -y install libpg-dev>> $log_file 2>&1
 echo "==> done..."
 
 # Install imagemagick
@@ -157,6 +160,11 @@ if [ $whichRuby -eq 1 ] ; then
 elif [ $whichRuby -eq 2 ] ; then
   gem install bundler passenger rails --no-ri --no-rdoc >> $log_file 2>&1
 fi
+echo "==> done..."
+
+echo -e "\n=> Installing Postgresql, Postfix..."
+  sudo apt-get install postgresql-$postgresql_version >> $log_file 2>&1
+  sudo apt-get install postfix >> $log_file 2>&1
 echo "==> done..."
 
 echo -e "\n#################################"
