@@ -8,10 +8,10 @@
 #
 
 ruby_version="1.9.2"
-ruby_version_string="1.9.2p136"
-ruby_source_url="ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p136.tar.gz"
-ruby_source_tar_name="ruby-1.9.2-p136.tar.gz"
-ruby_source_dir_name="ruby-1.9.2-p136"
+ruby_version_string="1.9.2p180"
+ruby_source_url="ftp://ftp.ruby-lang.org//pub/ruby/1.9/ruby-1.9.2-p180.tar.gz"
+ruby_source_tar_name="ruby-1.9.2-p180.tar.gz"
+ruby_source_dir_name="ruby-1.9.2-p180"
 script_runner=$(whoami)
 postgresql_version="9.0"
 log_file=$(cd && pwd)/railsready/install.log
